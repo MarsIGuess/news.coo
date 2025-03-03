@@ -175,28 +175,43 @@ button:hover{
 
 
 
-
-.walkanimation{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.walkanimation {
+    position: absolute;
+    bottom: 10px; /* Keeps it at the bottom */
+    left: -150px; /* Start off-screen */
+    width: 100px; /* Adjust based on GIF size */
     height: 100px;
-    z-index: 1000;
+    background-image: url("Gallery/luWalkFBF2/walk1.gif"); /* Use actual GIF */
+    background-size: cover;
+    animation: walk-cycle 5s linear infinite;
 }
-.walkanimation::before{
-    content: "";
-    display: inline-block;
+
+@keyframes walk-cycle {
+    0% {
+        left: -150px; /* Starts off-screen */
+    }
+    100% {
+        left: 100vw; /* Moves completely across the screen */
+    }
+}
+.walkanimation {
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
     width: 100px;
     height: 100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: frame-animation 2s steps(4) infinite;
+    animation: walk-cycle 3.5s linear infinite, frame-animation 0.5s steps(4) infinite;
+}
+
+@keyframes walk-cycle {
+    100% { left: -100px; }
+    0% { left: 100vw; }
 }
 
 @keyframes frame-animation {
-    0% { background-image: url("/Gallery/luWalkFBF2/walk1.png"); }
-    25% { background-image: url(""); }
-    50% { background-image: url(""); }
-    75% { background-image: url(""); }
-    100% { background-image: url("Extras/Gallery/luWalkFBF2/walk1.png"); }
+    0% { background-image: url("Gallery/luWalkFBF2/walk1.png"); }
+    25% { background-image: url("Gallery/luWalkFBF2/walk2.png"); }
+    50% { background-image: url("Gallery/luWalkFBF2/walk3.png"); }
+    75% { background-image: url("Gallery/luWalkFBF2/walk4.png"); }
+    100% { background-image: url("Gallery/luWalkFBF2/walk1.png"); }
 }
