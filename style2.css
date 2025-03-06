@@ -1,5 +1,40 @@
 body{
-    background-color: rgb(24, 25, 43);
-    color:rgb(173, 193, 219);
+    background-color: #18192b;
+    color:#adc1db;
 
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color: white;
+}
+
+.FTKKTF{
+    text-decoration: none;
+    color: white;
+}
+.FTKKTF:hover {
+    color: #ffe6ac;
+    text-shadow: 2px 2px 3px #ffd574,
+    -2px -2px 3px #ffe68c;
+}
+
+img {
+    display: inline-block;
+    max-width: 25%;
+    max-height: auto;
+}
+
+button{
+    color: #adc1db;
+    background-color: #18192b;
+    border: solid 5px #adc1db;
+    border-radius: 100px;
+}
+button:hover{
+    color: white;
+    background-color: #444784;
+    border: solid 5px white;
 }
