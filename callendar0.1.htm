@@ -329,4 +329,19 @@ function fnSetActiveSheet(iSh)
   </body>
  </noframes>
 </frameset>
+<input type="file" id="excelFile" accept=".xlsx,.xlsm" />
+<div id="calendarData"></div>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 </html>
+document.getElementById('excelFile').addEventListener('change', function(e) {
+  const file = e.target.files[0];
+    const data = new Uint8Array(e.target.result);
+    const workbook = XLSX.read(data, {type: 'array'});
+    const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+    const html = XLSX.utils.sheet_to_html(firstSheet);];
+    document.getElementById('calendarData').innerHTML = html;const html = XLSX.utils.sheet_to_html(firstSheet);
+  };ndarData').innerHTML = html;
+  reader.readAsArrayBuffer(file);;
+});  reader.readAsArrayBuffer(file);
+
+});
